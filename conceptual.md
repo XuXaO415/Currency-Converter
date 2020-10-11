@@ -2,8 +2,9 @@
 
 Answer the following questions below:
 
-- What are important differences between Python and JavaScript?  
-  | Comparisons                | Python                                                       | JS                                         |
+- What are important differences between Python and JavaScript?
+
+| Comparisons                | Python                                                       | JS                                         |
   | -------------------------- | ------------------------------------------------------------ | ------------------------------------------ |
   | REPL(Read-Eval-Print-Loop) | Included with installation                                   | Can be used in Node, not needed in browser |
   | Mutability                 | mutable and immutable data types                             | no concept of mutable and immutable        |

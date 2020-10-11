@@ -77,3 +77,8 @@ def get_result():
     symbol = session['symbol']
 
     return render_template('result.html', result=formatted_float, symbol=symbol)
+
+
+# Needed for Replit flask server
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
