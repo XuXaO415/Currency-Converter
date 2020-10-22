@@ -54,12 +54,10 @@ def convert_currency():
         result = rates.convert(from_curr, to_curr, amount)
     except RatesNotAvailableError:
 
-        try:
-            codes.get_symbol(from_curr)
-            session['msg'] = f'Not a valid code: {to_curr}'
-        except:
-            codes.get_symbol(to_curr)
+        if codes.get_symbol(from_curr) is None:
             session['msg'] = f'Not a valid code: {from_curr}'
+        else:
+            session['msg'] = f'Not a valid code: {to_curr}'
         return redirect('/error')
 
     symbol = codes.get_symbol(to_curr)
